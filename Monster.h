@@ -1,8 +1,7 @@
 #ifndef MONSTER_H
 #define MONSTER_H
 
-#include <iostream>
-using namespace std;
+#include "all.h"
 
 
 class Monster {
@@ -15,6 +14,9 @@ class Monster {
             this->health = health;
             this->attack = attack;
         }
+
+        int getHealth() { return health; }
+        int getAttack() { return attack; }
         
 };
 
