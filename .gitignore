@@ -1,2 +1,2 @@
-.vscode
-Weapon.h
+*.o
+*.exe
