@@ -2,8 +2,7 @@
 #define MONSTER_H
 
 class Player;  // for access to Player
-#include <iostream>
-using namespace std;
+#include "all.h"
 
 class Monster {
     protected:
@@ -16,6 +15,7 @@ class Monster {
         void takeDmg(int dmg);
         bool isAlive();
         virtual void attackPlayer(Player*);
+        virtual void art();
 };
 
 #endif

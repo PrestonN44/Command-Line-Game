@@ -1,8 +1,7 @@
 #ifndef MOVES_H
 #define MOVES_H
 
-#include <iostream>
-using namespace std;
+#include "all.h"
 
 // MOVES PLAYER HAS ACCESS TO
 struct Slash {

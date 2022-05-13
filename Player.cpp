@@ -7,15 +7,17 @@ Player::Player() {
     this->attack = 25;
     this->armor = 5;
     this->level = 1;
+    this->monstersKilled = 0;
     moves = new Moves();
 }
 
 // CHARACTER LOADED FROM FILE
-Player::Player(int health, int attack, int armor, int level, int s, int w, int b, int p) {  
+Player::Player(int health, int attack, int armor, int level, int s, int w, int b, int p, int mk) {  
     this->health = health;
     this->attack = attack;
     this->armor = armor;
     this->level = level;
+    this->monstersKilled = mk;
     moves = new Moves(s, w, b, p);
 }
 
@@ -52,16 +54,11 @@ int Player::displayMoves() {
     int choice;
 
     cout << "\n*******************************************************";
-    cout << "\n*   1. Slash: " << moves->slashRemaining() <<  "          2. Whirlwind: " << moves->whirlwindRemaining() << "       *";
-    cout << "\n*   3. Pierce: " << moves->pierceRemaining() << "         4. Block: " << moves->blockRemaining() << "         *";
+    cout << "\n|   1. Slash: " << moves->slashRemaining() <<  "      |   2. Whirlwind: " << moves->whirlwindRemaining() << "        |";
+    cout << "\n|   3. Pierce: " << moves->pierceRemaining() << "     |   4. Block: " << moves->blockRemaining() << "          |";
     cout << "\n*******************************************************";
-    cout << "\n\nPick a move: ";
-    cin >> choice;
-
-    while (choice < 1 || choice > 4) {
-        cout << "\nChoose again: ";
-        cin >> choice;
-    }
+    cout << "\n\nChoose a move";
+    choice = validateInt(4);
 
     return choice;
 }
@@ -88,12 +85,15 @@ int Player::getHealth() { return health; }
 int Player::getAttack() { return attack; }
 int Player::getArmor() { return armor; }
 int Player::getLevel() { return level; }
+int Player::getMonstersKilled() { return monstersKilled; }
 
 /// GET MOVES REMAINING USES ///
 int Player::getSlash() { return moves->getSlash(); }
 int Player::getWhirlwind() { return moves->getWhirlwind(); }
 int Player::getBlock() { return moves->getBlock(); }
 int Player::getPierce() { return moves->getPierce(); }
+
+void Player::updateMonstersKilled() { monstersKilled++; }
         
 
 

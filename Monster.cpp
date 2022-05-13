@@ -16,7 +16,9 @@ bool Monster::isAlive() {
     return health > 0; 
 }
 
-void Monster::attackPlayer(Player*) {}  // virtual function
+// VIRTUAL FUNCTIONS
+void Monster::attackPlayer(Player*) {} 
+void Monster::art() {}
 
 
 

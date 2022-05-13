@@ -1,7 +1,10 @@
 
 
 run: game.o helper.cpp Monster.o Moves.o Player.o
-	g++ game.o helper.cpp Monster.o Moves.o Player.o -o run
+	g++ game.o all.cpp helper.cpp Monster.o Moves.o Player.o -o run
+
+all.o: all.cpp headers/all.h
+	g++ -c all.cpp
 
 helper.o: helper.cpp headers/helper.h
 	g++ -c helper.cpp

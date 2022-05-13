@@ -37,7 +37,6 @@ bool Moves::updateSlash() {
     else 
         return false;
 }
-
 bool Moves::updateWhirlwind() { 
     if (whirlwind.remainingUses > 0) {
         whirlwind.remainingUses--; 
@@ -46,7 +45,6 @@ bool Moves::updateWhirlwind() {
     else 
         return false;
 }
-
 bool Moves::updatePierce() { 
     if (pierce.remainingUses > 0) {
         pierce.remainingUses--; 
@@ -55,7 +53,6 @@ bool Moves::updatePierce() {
     else 
         return false;
 }
-
 bool Moves::updateBlock() { 
     if (block.remainingUses > 0) {
         block.remainingUses--; 
