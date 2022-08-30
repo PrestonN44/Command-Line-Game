@@ -96,7 +96,7 @@ Monster* monsterSpawn() {
 vector<string> getSaves(const string path) {
     struct dirent *saveFile;
     DIR *dp;
-    vector<string> saves;\
+    vector<string> saves;
     string t;
     int choice;
 

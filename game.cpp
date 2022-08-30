@@ -2,7 +2,6 @@
 
 /*
 TODO: leveling system
-TODO: ascii art
 TODO: more monster moves
 TODO: tavern for healing and refilling moves
 TODO: more weapons/monsters
